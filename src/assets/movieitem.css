@@ -1,0 +1,78 @@
+div.poster {
+    position: relative;
+    margin-right: 20px;
+    color: white;
+    font-size: 13px;
+}
+
+div.poster:hover img{
+    border-radius: 2px;
+    box-shadow:3px 3px #ED690A;
+
+}
+
+.view {
+    border-radius: 1px;
+    position: absolute; 
+    top: 169px; 
+    left: 45%; 
+    width: 55%; 
+    
+}
+
+
+.itemContainer {
+    scrollbar-width: none;
+    transition: transform 450ms;
+    overflow: -moz-hidden-unscrollable;
+    overflow-x: scroll;
+    display: flex;
+    width: 95vw;
+    overflow: -moz-scrollbars-horizontal; 
+    grid-template-columns: repeat(20, 1fr);
+    column-gap: 0;
+}
+
+.itemContainer::-webkit-scrollbar {
+    display: none;
+ }
+
+ .itemContainer:hover .arrowright {
+    display: inline-block;
+    overflow: scroll;
+    
+ }
+
+ .itemContainer:hover .arrowleft {
+    display: inline-block;
+    overflow: scroll;
+
+ }
+ .arrowright {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    height: 190px;
+    position: absolute;
+    left: 1381px;
+    cursor: pointer;
+  }
+
+  .arrowleft {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    height: 190px;
+    position: absolute;
+    left: 63px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .feather-chevron-right {
+    margin-top: 70px;
+    color: white;
+  }
+
+  .feather-chevron-left {
+    margin-top: 70px;
+    color: white;
+  }

@@ -1,0 +1,29 @@
+<section style={{ color: 'white', marginTop: 20 }}>
+    <img style={{ position: 'left' }} src={preview.map(list => list.mov_banner).toString()} width="140" height="190" />
+
+    <div style={{ marginTop: "90px", marginLeft: 31, position: "right" }}>
+        <h1 className="display-4">{preview.map(list => list.mov_title)}</h1>
+        <p style={{ maxWidth: 600, fontSize: "20px" }}>{preview.map(list => list.mov_desc)}</p>
+        <Link to={`movie/${preview.map(list => list.mov_id)}`}>
+            <button className="btn btn-dark btn-md">Watch Now</button>
+        </Link>
+        {toggle ? <button className="ml-2 btn btn-dark btn-md" disabled>Add to List Done</button> : <button onClick={addList} className="ml-2 btn btn-dark btn-md">+ My List</button>}
+
+    </div>
+</section>
+
+section {
+    content: "";
+    background: radial - gradient(rgba(0, 0, 0, 0.7), #141414), url(${ preview.map(list => list.mov_banner).toString() });
+    -webkit - background - size: 150 % 100 %;
+    -moz - background - size: 150 % 100 %;
+    -o - background - size: 150 % 100 %;
+    background - size: 100 % 100 %;
+    background - position: center center;
+    background - repeat: no - repeat;
+    background - size: fixed;
+    height: 360px;
+    left: 62px;
+    position: absolute;
+    right: 0px;
+}
